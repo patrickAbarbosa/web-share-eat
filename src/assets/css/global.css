@@ -11,9 +11,11 @@ html {
   background-color: #353535;
 }
 
-body {
+body, div, p, span {
   text-align: left;
-  font: Light 16px/20px Nunito Sans;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 1em/0.625em;
   color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
 }
@@ -21,6 +23,7 @@ body {
 h1, h2, h3, h4, h5 { 
   text-align: left;
   font-family: 'Poppins', sans-serif;
+  font-weight: bold;
   text-align: left;
   color: #FFFFFF;
 }
@@ -28,6 +31,7 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-size: 2.25em/2.5em;
   letter-spacing: 0.0225em;
+  margin-bottom: 0.4em;
   color: #F3AA00;
 }
 
