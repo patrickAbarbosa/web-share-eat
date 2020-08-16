@@ -3,8 +3,7 @@
 
 <CardMenuItem 
   title='You Title'
-  onClickPlace={() => console.log('click')} // Called when the card is clicked
-  onClickAdd={() => console.log('click')} // Called when the add button is clicked
+  price={5} // Price  
 >
   Content
 </CardMenuItem>
@@ -51,6 +50,14 @@ const styles = {
       color: '#FFFFFF'
     }
   }),
+  headerContainer: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  headerText: {
+    font: `Bold 16px/10px Poppins`,
+    color: '#FFFFFF'    
+  },
   cardContent: makeStyles({
     root: {
       paddingTop: '0.6em',
@@ -60,15 +67,30 @@ const styles = {
   })
 }
 
+const renderHeader = (title, price) => {
+  return (
+    <div style={styles.headerContainer}>
+      <span style={styles.headerText}>
+        {title}
+      </span>
+      <span style={styles.headerText}>
+        {price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+      </span>
+    </div>
+  )
+}
 const CardMenuItem = (props) => {
-  const { title, children } = props
+  const { children, title, price } = props
 
   return (
     <Grid container alignItems='center'>
       <Card classes={styles.card()}>
         <div style={styles.container}>
           <CardActionArea classes={styles.cardActionArea()}>
-            <CardHeader title={title} classes={styles.cardHeader()}/>
+            <CardHeader 
+              title={renderHeader(title, price)}  
+              classes={styles.cardHeader()}
+            />
             <CardContent classes={styles.cardContent()}>
               {children}
             </CardContent>  
