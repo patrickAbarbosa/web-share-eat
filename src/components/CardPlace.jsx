@@ -1,3 +1,15 @@
+/*
+  How to use this compoent
+
+<CardPlace 
+  title='You Title'
+  onClickPlace={() => console.log('click')} // Called when the card is clicked
+  onClickAdd={() => console.log('click')} // Called when the add button is clicked
+>
+  Content
+</CardPlace>
+*/
+
 import React from 'react'
 
 // Materia-UI
