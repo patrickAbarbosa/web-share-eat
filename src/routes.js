@@ -1,6 +1,6 @@
 // Pages
 import Home from './views/Home/Home.jsx'
-import Establishment from './views/Establishment/Establishment.jsx'
+import Place from './views/Place/Place.jsx'
 
 const Routes = [  
   {
@@ -10,9 +10,9 @@ const Routes = [
     component: Home
   },
   {
-    path: '/establishment',
-    name: 'Establishment',
-    component: Establishment
+    path: '/place',
+    name: 'Place',
+    component: Place
   },
   {
     redirect: '/'
