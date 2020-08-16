@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
 import { 
   Route, 
   Redirect, 
@@ -14,6 +15,9 @@ import Routes from '../routes'
 
 // Assets
 import logo from '../assets/img/logo.svg'
+
+// Actions
+import { getPlaces } from '../store/actions.js'
 
 const styles = {
   companyContainer: {
@@ -47,15 +51,23 @@ const RenderRoutes = () => {
 }
 
 const Main = (props) => {
-  console.log()
+  useEffect(() => {
+    props.getPlaces()
+  }, [])
+
   return (
     <Container maxWidth='md'>      
       <div style={styles.companyContainer}>
-       <img className='company-logo' src={logo} />
+        <img className='company-logo' src={logo} />
       </div>
       <RenderRoutes />
     </Container>
   )
 }
 
-export default Main
+const mapStateToProps = ({ place }) => {
+  return { place }
+}
+export default connect(mapStateToProps, { 
+  getPlaces 
+})(Main)
