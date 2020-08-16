@@ -20,12 +20,10 @@ import logo from '../assets/img/logo.svg'
 import { getPlaces } from '../store/actions.js'
 
 const styles = {
-  companyContainer: {
-    display: 'flex',
-    justifyContent: 'center',
+  companyContainer: { 
     paddingTop: '1em',
     paddingBottom: '1em',
-    alignItems: 'center'
+    textAlign: 'center'
   }
 }
 
