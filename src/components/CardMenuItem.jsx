@@ -83,22 +83,19 @@ const CardMenuItem = (props) => {
   const { children, title, price } = props
 
   return (
-    <Grid container alignItems='center'>
-      <Card classes={styles.card()}>
-        <div style={styles.container}>
-          <CardActionArea classes={styles.cardActionArea()}>
-            <CardHeader 
-              title={renderHeader(title, price)}  
-              classes={styles.cardHeader()}
-            />
-            <CardContent classes={styles.cardContent()}>
-              {children}
-            </CardContent>  
-          </CardActionArea>    
-        </div>
-      </Card>
-    </Grid>
-    
+    <Card classes={styles.card()}>
+      <div style={styles.container}>
+        <CardActionArea classes={styles.cardActionArea()}>
+          <CardHeader 
+            title={renderHeader(title, price)}  
+            classes={styles.cardHeader()}
+          />
+          <CardContent classes={styles.cardContent()}>
+            {children}
+          </CardContent>  
+        </CardActionArea>    
+      </div>
+    </Card>
   )
 }
 
