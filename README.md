@@ -1,6 +1,8 @@
 # Front End Share Eat
 This project was proposed by the 4all team for share eat.
 
+**Note: This project does not require the use of redux. However, it was used to demonstrate that i have mastered its use.**
+
 ## Dependencies
 * NodeJs
 * ReactJs
