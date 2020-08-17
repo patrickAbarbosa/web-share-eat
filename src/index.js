@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 
+/*
+  ---------------------------- Note ------------------------------
+  This project does not require the use of redux. 
+  However, it was used to demonstrate that i have mastered its use.
+*/
+
 // Redux
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
