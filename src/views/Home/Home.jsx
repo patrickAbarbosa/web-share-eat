@@ -23,7 +23,6 @@ const renderPlaces = (places, history) => {
     return <h3>Nenhum lugar encontrado.</h3>
 
   return places.map((place, indice) => {
-    console.log(place)
     return (
       <Grid item xs={12} sm={6} md={4} lg={4}>
         <CardPlace 
