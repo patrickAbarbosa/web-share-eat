@@ -29,7 +29,9 @@ const renderInput = (props) => {
   switch (props.type) {
     case 'textarea':
       return (
-        <textarea {...props} />
+        <textarea {...props} 
+          onChange={value => props.onChangeText(value.target.value)} 
+        />
       )
     
     case 'money':
