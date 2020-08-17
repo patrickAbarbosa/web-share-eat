@@ -4,8 +4,7 @@ import { connect } from 'react-redux'
 // Materia-UI
 import {
   Grid,
-  IconButton,
-  makeStyles
+  IconButton
 } from '@material-ui/core'
 
 import { AddCircle, NavigateBefore } from '@material-ui/icons'
@@ -30,14 +29,6 @@ const renderMenu = (menu, history) => {
         </CardMenuItem>
       </Grid>
     )
-  })
-}
-
-const styles = {
-  addButton: makeStyles({
-    colorPrimary: {
-      color: env.colors.primary
-    }
   })
 }
 

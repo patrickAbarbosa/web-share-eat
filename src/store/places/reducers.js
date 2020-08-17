@@ -1,11 +1,9 @@
 import {
-  PLACES,
-  PLACE
+  PLACES
 } from './types.js'
 
 const INITIAL_STATE = {
-  places: null,
-  place: null
+  places: null
 }
 
 export default (state = INITIAL_STATE, action) => {
@@ -15,18 +13,6 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         places: action.payload 
-      }
-    
-    case PLACES:
-      return {
-        ...state,
-        places: action.payload 
-      }
-    
-    case PLACE:
-      return {
-        ...state,
-        place: action.payload 
       }
   
     default:

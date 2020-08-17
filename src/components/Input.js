@@ -1,3 +1,14 @@
+/*
+  How to use this component
+
+<Input
+  label='Your label' 
+  placeholder='Your paceholder'
+  onChangeText=
+  type='text' // When it is currency to use money
+/>
+*/
+
 import React from 'react'
 
 // Input Mask
@@ -9,7 +20,7 @@ const moneyInput = (props) => {
       style={{ width: '10em'}}
       kind='money'
       placeholder='R$ 0,00'
-      onChangeText={props.onChangeText}
+      onChangeText={props.onChange}
     />
   )
 }
@@ -33,18 +44,21 @@ const renderInput = (props) => {
       )
   
     default:
-      return <input {...props} />
+      return (
+        <input 
+          {...props} 
+          onChange={value => props.onChangeText(value.target.value)} 
+        />
+      )
   }
 }
 
-
 const Input = (props) => {
   
- 
   return (
     <>
       <label>{props.label}</label>
-      {props.type == 'money' ? 
+      {props.type === 'money' ? 
         moneyInput(props)
         : renderInput(props)
       }

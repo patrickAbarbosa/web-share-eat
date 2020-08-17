@@ -1,6 +1,5 @@
 import {
-  PLACES,
-  PLACE
+  PLACES
 } from './types.js'
 
 import ReturnApi from '../../return-api.json'
