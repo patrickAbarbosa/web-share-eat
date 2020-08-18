@@ -46,7 +46,7 @@ const renderForm = (props) => {
             placeholder='Insira uma descrição'
             type='textarea'
             rows={4}
-            maxlength="200"
+            maxLength="200"
             onChangeText={e => props.setDescription(e)}
             value={props.description}
           />
