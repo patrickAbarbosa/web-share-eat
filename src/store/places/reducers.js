@@ -1,5 +1,6 @@
 import {
-  PLACES
+  PLACES,
+  SAVE_DIST
 } from './types.js'
 
 const INITIAL_STATE = {
@@ -15,6 +16,17 @@ export default (state = INITIAL_STATE, action) => {
         places: action.payload 
       }
   
+    case SAVE_DIST:
+      const dist = {
+        name: action.payload.name,
+        price: action.payload.price,
+        description: action.payload.description 
+      }
+      
+      state.places[action.payload.place].menuItems.push(dist)
+      
+      return { ...state }
+      
     default:
       return state
   }
