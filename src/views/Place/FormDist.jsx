@@ -12,7 +12,6 @@ import { NavigateBefore } from '@material-ui/icons'
 
 // Core Components
 import Input from '../../components/Input'
-import env from '../../env'
 
 // Actions 
 import { query } from '../../utils/functions'
