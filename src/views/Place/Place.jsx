@@ -44,7 +44,7 @@ const Place = (props) => {
     search?.place ?
     <>
       <div style={{position: 'absolute', top: '0.5em', marginLeft: '-1em'}}>
-        <IconButton aria-label="Ver mais" onClick={() => props.history.goBack()}>
+        <IconButton aria-label="Ver mais" onClick={() => props.history.push('/')}>
           <NavigateBefore fontSize="large" />
         </IconButton>
       </div>
