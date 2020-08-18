@@ -98,8 +98,8 @@ const FormDist = (props) => {
     }
     
     const ammount = parseFloat(price.replace('R$', '').replace('.', '').replace(',', '.'))
-    
-    if(ammount == NaN || ammount <= 0){
+
+    if(Number.isNaN(ammount) || ammount <= 0){
       setLoadingSave(false)
       return setFeedback({open: true, message: 'Preço inválido!', severity: 'error' }) 
     }
