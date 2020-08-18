@@ -20,7 +20,7 @@ const moneyInput = (props) => {
       style={{ width: '10em'}}
       kind='money'
       placeholder='R$ 0,00'
-      onChangeText={props.onChange}
+      onChangeText={props.onChangeText}
     />
   )
 }
