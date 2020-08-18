@@ -31,7 +31,7 @@ const styles = {
 const RenderRoutes = () => {
   const routes = Routes.map((route, key) => {
     if(route.redirect)      
-      return <Redirect to={route.redirect}  />
+      return <Redirect to={route.redirect} key={key}  />
     return (
       <Route 
         path={route.path} 
