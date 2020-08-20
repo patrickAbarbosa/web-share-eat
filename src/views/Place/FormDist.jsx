@@ -137,7 +137,7 @@ const FormDist = (props) => {
       <LinearProgress />
       : search?.place ?
         <>
-          <div style={styles.conteinerBack}>
+          <div style={styles.containerBack}>
             <IconButton aria-label="Ver mais" onClick={() => props.history.goBack()}>
               <NavigateBefore fontSize="large" />
             </IconButton>
