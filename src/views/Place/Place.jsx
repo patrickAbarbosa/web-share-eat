@@ -16,6 +16,27 @@ import env from '../../env'
 // Actions 
 import { query } from '../../utils/functions'
 
+// styles 
+const styles = {
+  containerBack: {
+    position: 'absolute', 
+    top: '0.5em', 
+    marginLeft: '-1em'
+  },
+  gridMenu: {
+    marginTop: '0.5em'
+  },
+  containerButtonAdd: {
+    position: 'absolute', 
+    bottom: '0.5em',
+    right: '0.5em'
+  },
+  iconAdd: { 
+    color: env.colors.primary, 
+    fontSize: '2.5em'
+  }
+}
+
 const renderMenu = (menu, history) => {
   
   if(!menu || !menu?.length > 0)
@@ -43,7 +64,7 @@ const Place = (props) => {
   return (
     search?.place ?
     <>
-      <div style={{position: 'absolute', top: '0.5em', marginLeft: '-1em'}}>
+      <div style={styles.containerBack}>
         <IconButton aria-label="Ver mais" onClick={() => props.history.push('/')}>
           <NavigateBefore fontSize="large" />
         </IconButton>
@@ -52,13 +73,13 @@ const Place = (props) => {
       <h1>{places[search.place]?.name}</h1>
       <span>{places[search.place]?.menuItems?.length} pratos</span>
       
-      <Grid style={{marginTop: '0.5em'}} container spacing={2}>
+      <Grid style={styles.gridMenu} container spacing={2}>
         {renderMenu(places[search.place]?.menuItems)}
       </Grid>
       
-      <div style={{position: 'absolute', bottom: '0.5em', right: '0.5em'}}>
+      <div style={styles.containerButtonAdd}>
         <IconButton aria-label="Ver mais" onClick={() => props.history.push(`/place/newDist?place=${search.place}`)}>
-          <AddCircle fontSize="large"  style={{ color: env.colors.primary, fontSize: '2.5em'}} />
+          <AddCircle fontSize="large"  style={styles.iconAdd} />
         </IconButton>
       </div>
     </>

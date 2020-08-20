@@ -19,6 +19,20 @@ import {
   saveDist
 } from '../../store/actions'
 
+const styles = {
+  containerBack: {
+    position: 'absolute', 
+    top: '0.5em', 
+    marginLeft: '-1em'
+  },
+  progress: {
+    marginTop: '2em'
+  },
+  buttonSave: {
+    marginTop: '3.5em'
+  }
+}
+
 const renderForm = (props) => {  
   return (
     <form>
@@ -53,9 +67,9 @@ const renderForm = (props) => {
           <span>*A descrição deve conter até 200 caracteres.</span>
         </div>
         {props.loadingSave ? 
-          <LinearProgress style={{marginTop: '2em'}}/>  
+          <LinearProgress style={styles.progress}/>  
           :
-          <button className='button' onClick={e => props.save(e)} style={{marginTop: '3.5em'}}>Salvar</button>
+          <button className='button' onClick={e => props.save(e)} style={styles.buttonSave}>Salvar</button>
         }
     </form>
   )
@@ -123,7 +137,7 @@ const FormDist = (props) => {
       <LinearProgress />
       : search?.place ?
         <>
-          <div style={{position: 'absolute', top: '0.5em', marginLeft: '-1em'}}>
+          <div style={styles.conteinerBack}>
             <IconButton aria-label="Ver mais" onClick={() => props.history.goBack()}>
               <NavigateBefore fontSize="large" />
             </IconButton>

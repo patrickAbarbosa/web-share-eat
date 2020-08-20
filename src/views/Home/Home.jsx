@@ -9,6 +9,12 @@ import {
 // Core Components
 import CardPlace from '../../components/CardPlace'
 
+const styles = {
+  gridPlace: {
+    marginTop: '0.5em'
+  }
+}
+
 const newDist = (placeId, history) => {
   history.push(`/place/newDist?place=${placeId}`)
 }
@@ -45,7 +51,7 @@ const Home = (props) => {
     <>
       <h1>Lugares</h1>
       <span>{places?.length} lugares cadastrados</span>
-      <Grid style={{marginTop: '0.5em'}} container spacing={2}>
+      <Grid style={styles.gridPlace} container spacing={2}>
         {renderPlaces(places, props.history)}
       </Grid>
     </>
